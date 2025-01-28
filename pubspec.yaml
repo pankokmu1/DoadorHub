@@ -17,8 +17,7 @@ dependencies:
   flutter_secure_storage:
   equatable:
   connectivity_plus:
-  flutter_localizations:
-    sdk: flutter
+  dartz:
 
 dev_dependencies:
   flutter_test:
