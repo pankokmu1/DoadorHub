@@ -1,0 +1,43 @@
+name: wk_blood
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.6.1
+
+dependencies:
+  flutter_bloc:
+  bloc:
+  dio:
+  get_it:
+  injectable:
+  fl_chart:
+  rive:
+  flutter_secure_storage:
+  equatable:
+  connectivity_plus:
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail:
+  injectable_generator:
+  build_runner:
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/json/
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
