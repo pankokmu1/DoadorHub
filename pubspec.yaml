@@ -7,18 +7,21 @@ environment:
   sdk: ^3.6.1
 
 dependencies:
+  flutter:
+      sdk: flutter
   flutter_bloc:
   bloc:
   dio:
   get_it:
   injectable:
-  fl_chart:
-  rive:
+  fl_chart: ^0.68.0
+  rive: 0.13.20
   flutter_secure_storage:
   equatable:
   connectivity_plus:
-  flutter_localizations:
-    sdk: flutter
+  dartz:
+  file_picker:
+  collection:
 
 dev_dependencies:
   flutter_test:
@@ -35,9 +38,9 @@ flutter:
     - assets/images/
     - assets/json/
 
-  fonts:
-    - family: Roboto
-      fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf
-        - asset: assets/fonts/Roboto-Bold.ttf
-          weight: 700
+  # fonts:
+  #   - family: Roboto
+  #     fonts:
+  #       - asset: assets/fonts/Roboto-Regular.ttf
+  #       - asset: assets/fonts/Roboto-Bold.ttf
+  #         weight: 700
