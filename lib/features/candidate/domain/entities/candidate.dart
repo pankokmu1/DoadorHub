@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
-import '../enums/blood_type.dart';
+import 'package:wk_blood/features/dashboard/domain/enums/blood_type.dart';
+import 'package:wk_blood/features/dashboard/domain/enums/states.dart';
 import '../enums/gender.dart';
-import '../enums/state.dart';
 
 final class Candidate extends Equatable {
   final String name;
@@ -17,7 +17,7 @@ final class Candidate extends Equatable {
   final int number;
   final String neighborhood;
   final String city;
-  final State state;
+  final States state;
   final String landline;
   final String mobile;
   final double height;
@@ -60,7 +60,7 @@ final class Candidate extends Equatable {
     int? number,
     String? neighborhood,
     String? city,
-    State? state,
+    States? state,
     String? landline,
     String? mobile,
     double? height,
@@ -92,49 +92,49 @@ final class Candidate extends Equatable {
 
   Map<String, dynamic> toJson() {
     return {
-      'name': name,
+      'nome': name,
       'cpf': cpf,
       'rg': rg,
-      'birth_date': birthDate,
-      'gender': gender.name,
-      'mother': mother,
-      'father': father,
+      'data_nasc': birthDate,
+      'sexo': gender.name,
+      'mae': mother,
+      'pai': father,
       'email': email,
-      'postal_code': postalCode,
-      'address': address,
-      'number': number,
-      'neighborhood': neighborhood,
-      'city': city,
-      'state': state.name,
-      'landline': landline,
-      'mobile': mobile,
-      'height': height,
-      'weight': weight,
-      'blood_type': bloodType.name,
+      'cep': postalCode,
+      'endereco': address,
+      'numero': number,
+      'bairro': neighborhood,
+      'cidade': city,
+      'estado': state.name,
+      'telefone_fixo': landline,
+      'celular': mobile,
+      'altura': height,
+      'peso': weight,
+      'tipo_sanguineo': bloodType.name,
     };
   }
 
   factory Candidate.fromJson(Map<String, dynamic> json) {
     return Candidate(
-      name: json['name'],
+      name: json['nome'],
       cpf: json['cpf'],
       rg: json['rg'],
-      birthDate: json['birth_date'],
-      gender: Gender.fromString(json['gender']),
-      mother: json['mother'],
-      father: json['father'],
+      birthDate: json['data_nasc'],
+      gender: Gender.fromString(json['sexo']),
+      mother: json['mae'],
+      father: json['pai'],
       email: json['email'],
-      postalCode: json['postal_code'],
-      address: json['address'],
-      number: json['number'],
-      neighborhood: json['neighborhood'],
-      city: json['city'],
-      state: State.fromString(json['state']),
-      landline: json['landline'],
-      mobile: json['mobile'],
-      height: (json['height'] as num).toDouble(),
-      weight: (json['weight'] as num).toDouble(),
-      bloodType: BloodType.fromString(json['blood_type']),
+      postalCode: json['cep'],
+      address: json['endereco'],
+      number: json['numero'],
+      neighborhood: json['bairro'],
+      city: json['cidade'],
+      state: States.fromString(json['estado']),
+      landline: json['telefone_fixo'],
+      mobile: json['celular'],
+      height: (json['altura'] as num).toDouble(),
+      weight: (json['peso'] as num).toDouble(),
+      bloodType: BloodType.fromString(json['tipo_sanguineo']),
     );
   }
 

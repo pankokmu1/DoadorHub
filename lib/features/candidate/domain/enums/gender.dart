@@ -1,7 +1,6 @@
 enum Gender {
-  male('Male'),
-  female('Female'),
-  other('Other');
+  male('Masculino'),
+  female('Feminino');
 
   final String name;
   const Gender(this.name);

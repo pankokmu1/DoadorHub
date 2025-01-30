@@ -1,4 +1,4 @@
-enum State {
+enum States {
   acre('AC'),
   alagoas('AL'),
   amapa('AP'),
@@ -28,10 +28,10 @@ enum State {
   tocantins('TO');
 
   final String name;
-  const State(this.name);
+  const States(this.name);
 
-  static State fromString(String value) {
-    return State.values.firstWhere(
+  static States fromString(String value) {
+    return States.values.firstWhere(
       (state) => state.name.toUpperCase() == value.toUpperCase(),
       orElse: () => throw ArgumentError('Invalid state: $value'),
     );

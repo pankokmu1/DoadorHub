@@ -2,10 +2,11 @@ import 'package:dartz/dartz.dart';
 import '../../../../core/errors/failures.dart';
 import '../repositories/candidate_repository.dart';
 
-class UploadCandidates {
+class CheckUploadCandidates {
   final CandidateRepository repository;
 
-  UploadCandidates(this.repository);
+  CheckUploadCandidates(this.repository);
 
-  Future<Either<Failure, void>> call() => repository.checkUploadCandidates();
+  Future<Either<Failure, void>> call() =>
+      repository.checkCandidatesToUploadInCache();
 }
